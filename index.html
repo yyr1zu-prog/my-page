@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Вегетативная нервная система: Иннервация головы и шеи</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+        :root {
+            --bg-color: #0b132b;       /* Глубокий темно-синий */
+            --card-bg: #1c2541;        /* Чуть светлее для карточек */
+            --text-main: #e2e8f0;      /* Мягкий белый */
+            --text-muted: #94a3b8;     /* Серо-голубой для второстепенного */
+            --accent-blue: #38bdf8;    /* Яркий голубой */
+            --accent-purple: #c084fc;  /* Фиолетовый для парасимпатики */
+            --accent-orange: #fb923c;  /* Оранжевый для симпатики */
+            --accent-green: #4ade80;   /* Зеленый для выделений */
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            -webkit-text-size-adjust: 100%; /* Чтобы iOS не менял шрифты */
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .section-title.para { color: var(--accent-purple); }
+        .section-title.sympa { color: var(--accent-orange); }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border-left: 4px solid transparent;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .card.para-border { border-left-color: var(--accent-purple); }
+        .card.sympa-border { border-left-color: var(--accent-orange); }
+
+        .card h3 {
+            margin-top: 0;
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        ul, ol {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .highlight-blue { color: var(--accent-blue); font-weight: 600; }
+        .highlight-purple { color: var(--accent-purple); font-weight: 600; }
+        .highlight-orange { color: var(--accent-orange); font-weight: 600; }
+
+        .latin {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            color: var(--accent-blue);
+            background: rgba(56, 189, 248, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            word-break: break-word; /* Чтобы длинные слова переносились */
+        }
+
+        /* --- МОБИЛЬНАЯ АДАПТАЦИЯ --- */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px; /* Уменьшаем отступы по краям на телефоне */
+            }
+
+            h1 {
+                font-size: 1.7rem; /* Уменьшаем главный заголовок */
+            }
+
+            .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+                margin-top: 30px;
+            }
+
+            .card {
+                padding: 16px; /* Уменьшаем внутренние отступы карточек */
+                border-radius: 10px;
+            }
+
+            .card h3 {
+                font-size: 1.1rem;
+            }
+
+            ul, ol {
+                padding-left: 16px; /* Сдвигаем списки ближе к краю */
+            }
+
+            li {
+                margin-bottom: 10px;
+            }
+
+            /* Уменьшаем шрифт латыни на маленьких экранах */
+            .latin {
+                font-size: 0.8em;
+                padding: 1px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Вегетативная нервная система</h1>
+        <div class="subtitle">Иннервация головы и шеи (Конспект)</div>
+    </header>
+
+    <!-- ПАРАСИМПАТИКА -->
+    <h2 class="section-title para">🔹 1. Парасимпатика и иннервация головы и шеи</h2>
+
+    <div class="card para-border">
+        <h3>Общая характеристика</h3>
+        <p>Головной отдел (<span class="latin">párs craniális</span>) включает вегетативные ядра и парасимпатические волокна <span class="highlight-purple">глазодвигательного (III пара)</span>, <span class="highlight-purple">лицевого (VII пара)</span>, <span class="highlight-purple">языкоглоточного (IX пара)</span> и <span class="highlight-purple">блуждающего (X пара)</span> нервов, а также ресничный, крылонёбный, поднижнечелюстной, подъязычный, ушной узлы и их ветви.</p>
+    </div>
+
+    <div class="card para-border">
+        <h3>Иннервация слезной железы и желез слизистой оболочки полости носа</h3>
+        <ul>
+            <li><strong>Источник:</strong> Верхнее слюноотделительное ядро (в покрышке моста), аксоны в составе <span class="highlight-purple">лицевого нерва</span>.</li>
+            <li><strong>Путь:</strong> <span class="latin">Большой каменистый нерв</span> → борозда пирамиды височной кости → рваное отверстие → крыловидный канал (соединяется с глубоким каменистым нервом, образуя нерв крыловидного канала) → крыловидно-нёбная ямка.</li>
+            <li><strong>Узел:</strong> <span class="highlight-blue">Крылонёбный узел</span> (<span class="latin">gánglion pterygopalatinum</span>).</li>
+            <li><strong>Постганглионарные волокна:</strong> Идут в составе ветвей верхнечелюстного нерва (носонёбного, большого и малого нёбных, задних, латеральных и медиальных носовых, глоточной ветви) для иннервации <strong>желез слизистой оболочки полости носа, неба и глотки</strong>. Также через соединительную ветвь со скуловым нервом переходят в слезный нерв и иннервируют <strong>слезную железу</strong>.</li>
+        </ul>
+    </div>
+
+    <div class="card para-border">
+        <h3>Иннервация поднижнечелюстной и подъязычной слюнных желез</h3>
+        <ul>
+            <li><strong>Источник:</strong> Верхнее слюноотделительное ядро (аксоны в составе <span class="highlight-purple">барабанной струны</span> лицевого нерва).</li>
+            <li><strong>Путь:</strong> Барабанная струна присоединяется к язычному нерву.</li>
+            <li><strong>Узлы:</strong> <span class="highlight-blue">Поднижнечелюстной узел</span> (<span class="latin">gánglion submandibuláre</span>) и <span class="highlight-blue">подъязычный узел</span> (<span class="latin">gánglion sublinguale</span>).</li>
+            <li><strong>Иннервация:</strong> Постганглионарные волокна направляются к <strong>поднижнечелюстной и подъязычной слюнным железам</strong>.</li>
+        </ul>
+    </div>
+
+    <div class="card para-border">
+        <h3>Иннервация околоушной слюнной железы</h3>
+        <ul>
+            <li><strong>Источник:</strong> Нижнее слюноотделительное ядро (в продолговатом мозге), аксоны в составе <span class="highlight-purple">языкоглоточного нерва</span>.</li>
+            <li><strong>Путь:</strong> Барабанный нерв → барабанное сплетение → малый каменистый нерв → рваное отверстие.</li>
+            <li><strong>Узел:</strong> <span class="highlight-blue">Ушной узел</span> (<span class="latin">gánglion óticum</span>).</li>
+            <li><strong>Иннервация:</strong> Постганглионарные волокна к <strong>околоушной слюнной железе</strong> в составе околоушных ветвей ушно-височного нерва.</li>
+        </ul>
+    </div>
+
+    <div class="card para-border">
+        <h3>Парасимпатическая иннервация глаза</h3>
+        <ul>
+            <li><strong>Источник:</strong> Добавочное ядро глазодвигательного нерва (ядро Якубовича-Эдингера-Вестфаля).</li>
+            <li><strong>Путь:</strong> Глазодвигательный корешок → ресничный узел (<span class="latin">gánglion cilíáre</span>).</li>
+            <li><strong>Иннервация:</strong> Постганглионарные волокна в составе коротких ресничных нервов иннервируют <strong>мышцу, суживающую зрачок, и ресничную мышцу</strong>.</li>
+        </ul>
+    </div>
+
+    <!-- СИМПАТИКА -->
+    <h2 class="section-title sympa">🔸 2. Симпатика и иннервация головы и шеи</h2>
+
+    <div class="card sympa-border">
+        <h3>Общая характеристика</h3>
+        <p>Шейный отдел симпатического ствола представлен тремя узлами: верхним, средним и шейно-грудным (звездчатым).</p>
+    </div>
+
+    <div class="card sympa-border">
+        <h3>Верхний шейный узел (<span class="latin">gánglion cervicále supérius</span>)</h3>
+        <p>Самый крупный узел, лежит впереди поперечных отростков I–III шейных позвонков. От него отходят ветви:</p>
+        <ol>
+            <li><strong>Серые соединительные ветви</strong> (к шейным спинномозговым нервам).</li>
+            <li><strong>Внутренний сонный нерв</strong> → внутреннее сонное сплетение (<span class="latin">pléxus caróticus intérnus</span>).
+                <ul>
+                    <li><em>Ветви:</em> сонно-барабанные нервы (к слизистой среднего уха); <strong>глубокий каменистый нерв</strong> (соединяется с большим каменистым нервом); вокругсосудистое сплетение ветвей внутренней сонной артерии.</li>
+                    <li><em>Иннервация глаза:</em> симпатический корешок к ресничному узлу → короткие ресничные нервы → <strong>сосуды глаза и мышца, расширяющая зрачок</strong>.</li>
+                    <li><em>Иннервация слизистой рта и носа:</em> по крылонёбным нервам в верхнечелюстной нерв → <strong>сосуды, ткани, железы слизистой оболочки рта и полости носа, конъюнктивы нижнего века и кожи лица</strong>.</li>
+                </ul>
+            </li>
+            <li><strong>Наружные сонные нервы</strong> → наружное сонное сплетение (<span class="latin">pléxus caróticus extérnus</span>) → иннервация <strong>сосудов, желез, гладкомышечных элементов и тканей органов головы</strong>.</li>
+            <li><strong>Яремный нерв</strong> — делится на ветви к узлам языкоглоточного нерва и к подъязычному нерву (волокна идут в составе IX, X и XII черепных нервов).</li>
+            <li><strong>Гортанно-глоточные ветви</strong> — иннервируют <strong>сосуды, слизистую оболочку глотки и гортани, мышцы и другие ткани</strong>.</li>
+            <li><strong>Верхний шейный сердечный нерв</strong>.</li>
+        </ol>
+    </div>
+
+    <div class="card sympa-border">
+        <h3>Средний шейный узел (<span class="latin">gánglion cervicále médium</span>)</h3>
+        <p>Непостоянный, лежит кпереди от поперечного отростка VI шейного позвонка.</p>
+        <ul>
+            <li><strong>Серые соединительные ветви</strong> к V и VI шейным спинномозговым нервам.</li>
+            <li><strong>Средний шейный сердечный нерв</strong>.</li>
+            <li>Тонкие нервы к общему сонному сплетению и сплетению нижней щитовидной артерии, иннервируют <strong>щитовидную и околощитовидные железы</strong>.</li>
+        </ul>
+    </div>
+
+    <div class="card sympa-border">
+        <h3>Шейно-грудной (звездчатый) узел (<span class="latin">gánglion cervicothorácicum</span>)</h3>
+        <p>Лежит позади подключичной артерии. От узла отходят:</p>
+        <ul>
+            <li><strong>Серые соединительные ветви</strong> к VI, VII, VIII шейным спинномозговым нервам; веточки к подключичной артерии (подключичное сплетение).</li>
+            <li><strong>Позвоночный нерв</strong> → симпатическое позвоночное сплетение (<span class="latin">pléxus vertebrális</span>) → иннервация <strong>сосудов головного и спинного мозга</strong>.</li>
+            <li><strong>Нижний шейный сердечный нерв</strong>.</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
